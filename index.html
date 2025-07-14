@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark"> <!-- Bootstrap 5.3+ theme attribute -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Tech World - WordPress Website Quotation</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Playfair+Display:ital@1&display=swap" rel="stylesheet">
+    <!-- Font Awesome for Arrows (Optional) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Custom CSS (after Bootstrap to override) -->
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <div class="container main-container py-4">
+        <header class="pb-3 mb-4 border-bottom">
+            <div class="row align-items-center">
+                <div class="col-md-8">
+                    <h1 class="text-danger company-title">DYNAMIC TECH WORLD</h1>
+                    <p class="mb-1">Najafgarh, New Delhi - 110043</p>
+                    <div class="contact-details small">
+                        <span><img src="/asset/phone.svg" alt="Phone" class="contact-icon"> +91 9625284307</span><br>
+                        <span><img src="/asset/gmail.svg" alt="Email" class="contact-icon"> dynamictechworldofficial@gmail.com</span><br>
+                        <span><img src="/asset/web.svg" alt="Website" class="contact-icon"> www.dynamictechworld.com</span>
+                    </div>
+                </div>
+                <div class="col-md-4 d-flex justify-content-md-end align-items-start mt-3 mt-md-0">
+                    <button id="theme-toggle" class="btn btn-outline-secondary me-2" aria-label="Toggle theme">
+                        <img src="/asset/sun.svg" alt="Light mode" class="theme-icon light" style="display: none;">
+                        <img src="/asset/moon.svg" alt="Dark mode" class="theme-icon dark">
+                    </button>
+                    <div class="logo">
+                        <img src="/asset/dtw.webp" alt="Dynamic Tech World Logo" class="img-fluid" style="max-width: 80px;">
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <section id="wordpress-intro" class="text-center py-4">
+                <h2>Professional WordPress Websites Tailored For You</h2>
+                <p class="lead col-lg-8 mx-auto intro-paragraph">
+                    We specialize in creating stunning, high-performing WordPress websites that drive results.
+                    From simple blogs to complex e-commerce platforms, we bring your vision to life.
+                </p>
+                <a href="https://mywebsiteshowcase.netlify.app/" class="btn btn-danger btn-lg showcase-button">Showcase My Work</a>
+            </section>
+
+            <section id="wordpress-services" class="my-5">
+                <h4 class="section-title-custom">OUR WORDPRESS SOLUTIONS</h4>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item bg-transparent"><strong>Custom WordPress Design & Development:</strong> Unique websites built from scratch to match your brand.</li>
+                    <li class="list-group-item bg-transparent"><strong>Theme Customization:</strong> Adapting premium themes to fit your specific requirements.</li>
+                    <li class="list-group-item bg-transparent"><strong>E-commerce Solutions (WooCommerce):</strong> Powerful online stores to sell your products or services.</li>
+                    <li class="list-group-item bg-transparent"><strong>Business & Corporate Websites:</strong> Professional online presence for your company.</li>
+                    <li class="list-group-item bg-transparent"><strong>Blogs & Portfolio Websites:</strong> Engaging platforms to share your content and showcase your work.</li>
+                    <li class="list-group-item bg-transparent"><strong>Plugin Integration & Customization:</strong> Extending functionality with the right plugins.</li>
+                    <li class="list-group-item bg-transparent"><strong>Responsive Design:</strong> Websites that look great on all devices.</li>
+                    <li class="list-group-item bg-transparent"><strong>SEO-Friendly Foundations:</strong> Built with search engine optimization best practices in mind.</li>
+                    <li class="list-group-item bg-transparent"><strong>Website Maintenance & Support:</strong> Keeping your WordPress site secure and up-to-date.</li>
+                </ul>
+            </section>
+
+            <section id="wordpress-packages" class="my-5 position-relative">
+                <h4 class="section-title-custom">WORDPRESS WEBSITE PACKAGES</h4>
+                
+                <!-- Optional Navigation Arrows -->
+                <button class="package-nav-arrow prev-arrow" id="prevPackage" aria-label="Previous Package"><i class="fas fa-chevron-left"></i></button>
+                <button class="package-nav-arrow next-arrow" id="nextPackage" aria-label="Next Package"><i class="fas fa-chevron-right"></i></button>
+
+                <div class="packages-grid row g-0"> <!-- g-0 to remove gutters for precise card width control in scroll -->
+
+                    <!-- STARTER SITE PACKAGE - HOSTINGER STYLE -->
+                    <div class="col-lg-4 package-card-wrapper"> <!-- d-flex align-items-stretch removed as height will be intrinsic -->
+                        <div class="card h-100 package-card hostinger-style-card">
+                            <div class="card-header bg-transparent border-0 pt-3 pb-0 text-center" style="min-height: 30px;">
+                                <!-- Optional: <span class="badge bg-info text-dark popular-badge-alt">YOUR TAG</span> -->
+                            </div>
+                            <div class="card-body d-flex flex-column text-center pt-2">
+                                <h3 class="package-title mb-1 fs-4">Starter Site</h3>
+                                <p class="package-subtitle text-body-secondary small mb-3">Perfect for individuals, startups, or small businesses.</p>
+
+                                <div class="price-section mb-3">
+                                    <div class="original-price-container mb-1">
+                                        <span class="text-decoration-line-through text-body-secondary small">₹25,000</span> <!-- ORIGINAL PRICE -->
+                                        <span class="badge rounded-pill text-bg-primary ms-2 save-badge">SAVE 40%</span> <!-- YOUR DISCOUNT -->
+                                    </div>
+                                    <p class="current-price h1 fw-bold mb-0">
+                                        <span class="currency small align-baseline">₹</span>15,000
+                                        <!-- <span class="price-decimal">.00</span> -->
+                                        <!-- <span class="price-interval small text-body-secondary">/project</span> -->
+                                    </p>
+                                    <p class="bonus-offer text-primary fw-semibold mb-3 small">+ 1 year free hosting</p> <!-- YOUR BONUS -->
+                                </div>
+
+                                <a href="#call-to-action" class="btn btn-danger btn-lg w-100 choose-plan-btn package-cta mb-2">Choose plan</a>
+                                <p class="renewal-info text-body-secondary small mb-3">Renews at ₹2000/year for hosting. Cancel anytime.</p>
+                                
+                                <hr class="my-2">
+
+                                <ul class="list-unstyled features-list initial-features text-start mb-2 small">
+                                    <li><span class="icon included">✅</span> Custom Design Concepts</li>
+                                    <li><span class="icon included">✅</span> Responsive Design</li>
+                                    <li><span class="icon included">✅</span> 1 Year Premium Hosting</li>
+                                    <li><span class="icon included">✅</span> Free Domain (.com/.in)</li>
+                                    <li><span class="icon included">✅</span> Basic Security Suite</li>
+                                </ul>
+
+                                <button class="btn btn-outline-secondary btn-sm w-100 mb-2 toggle-features-btn" aria-expanded="false" aria-controls="features-starter-all">
+                                    Show All Features <span class="arrow">▼</span>
+                                </button>
+        
+                                <div class="all-features-container" id="features-starter-all" style="display: none;">
+                                    <ul class="list-unstyled features-list additional-features text-start small">
+                                        <!-- ** MANUALLY EDIT THIS LIST PER PACKAGE ** -->
+                                        <li><span class="icon included">✅</span> Up to 05+ Core Pages</li>
+                                        <li><span class="icon included">✅</span> Custom Design Concepts</li>
+                                        <li><span class="icon included">✅</span> Responsive Design (Mobile, Tablet, Desktop)</li>
+                                        <li><span class="icon included">✅</span> 1 Year Premium Hosting (Hostinger)</li>
+                                        <li><span class="icon not-included">❌</span> Free Domain (1st year, .com/.in)</li>
+                                        <li><span class="icon included">✅</span> Ads Integration By Adsterra(+ ₹2000 Extra)</li>
+                                        <li><span class="icon included">✅</span> Free 1 Business Mail</li>
+                                        <li><span class="icon included">✅</span> Earning Module PDF (with adsterra)</li>
+                                        <li><span class="icon included">✅</span> Basic Security Suite</li>
+                                        <li><span class="icon included">✅</span> Basic Theme Customization</li>
+                                        <li><span class="icon included">✅</span> Basic Theme Customization</li>
+                                        <li><span class="icon included">✅</span> Contact Form Integration</li>
+                                        <li><span class="icon not-included">❌</span> Contact Form with Basic Automation</li>
+                                        <li><span class="icon not-included">❌</span> Blog Setup & Styling</li>
+                                        <li><span class="icon included">✅</span> Social Media Integration</li>
+                                        <li><span class="icon included">✅</span> Basic SEO Setup</li>
+                                        <li><span class="icon not-included">❌</span> Advanced SEO Setup</li>
+                                        <li><span class="icon not-included">❌</span> Comprehensive SEO</li>
+                                        <li><span class="icon not-included">❌</span> Google Analytics Integration</li>
+                                        <li><span class="icon not-included">❌</span> Google Search Console Setup</li>
+                                        <li><span class="icon included">✅</span> WordPress Security Basics</li>
+                                        <li><span class="icon not-included">❌</span> Advanced Security Suite</li>
+                                        <li><span class="icon not-included">❌</span> Advanced Performance Optimization</li>
+                                        <li><span class="icon not-included">❌</span> Content Upload (up to 20+ pages)</li>
+                                        <li><span class="icon not-included">❌</span> Automated Backup Solution</li>
+                                        <li><span class="icon included">✅</span> SSL Certificate Installation</li>
+                                        <li><span class="icon not-included">❌</span> Product Upload</li>
+                                        <li><span class="icon not-included">❌</span> Payment Gateway Integration</li>
+                                        <li><span class="icon not-included">❌</span> Shipping & Tax Configuration</li>
+                                        <li><span class="icon not-included">❌</span> Inventory Management Setup</li>
+                                        <li><span class="icon not-included">❌</span> Coupon & Discount System Setup</li>
+                                        <li><span class="icon not-included">❌</span> Customer Account Management</li>
+                                        <li><span class="icon not-included">❌</span> Membership / Booking System</li>
+                                        <li><span class="icon not-included">❌</span> WordPress Staging Environment</li>
+                                        <li><span class="icon not-included">❌</span> Dedicated IP Address</li>
+                                        <li><span class="icon not-included">✅</span> 1 Months Support Duration</li>
+                                        <li><span class="icon not-included">❌</span> 3 Months Support Duration</li>
+                                        <li><span class="icon not-included">❌</span> 6 Months Support Duration</li>
+                                        <li><span class="icon included">✅</span> Basic Email Support Type</li>
+                                        <li><span class="icon not-included">❌</span> Premium Support Type</li>
+                                        <li><span class="icon not-included">❌</span> Priority Support Queue</li>
+                                        <li><span class="icon not-included">❌</span> Full WooCommerce E-commerce Setup</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- BUSINESS PRO PACKAGE - HOSTINGER STYLE -->
+                    <div class="col-lg-4 package-card-wrapper">
+                        <div class="card h-100 package-card hostinger-style-card popular-package"> <!-- Added popular-package class -->
+                             <div class="badge bg-primary popular-badge-alt my-1">MOST POPULAR</div>
+                            <div class="card-body d-flex flex-column text-center pt-2">
+                                <h3 class="package-title mt-4 fs-4">Business Pro</h3>
+                                <p class="package-subtitle text-body-secondary small mb-3">For growing businesses needing more power.</p>
+
+                                <div class="price-section mb-3">
+                                    <div class="original-price-container mb-1">
+                                        <span class="text-decoration-line-through text-body-secondary small">₹47,600</span> <!-- ORIGINAL PRICE -->
+                                        <span class="badge rounded-pill text-bg-primary ms-2 save-badge">SAVE 44%</span> <!-- YOUR DISCOUNT -->
+                                    </div>
+                                    <p class="current-price h1 fw-bold mb-0">
+                                        <span class="currency small align-baseline">₹</span>30,000
+                                    </p>
+                                    <p class="bonus-offer text-primary fw-semibold mb-3 small">+ 1 years business hosting</p> <!-- YOUR BONUS -->
+                                </div>
+
+                                <a href="#call-to-action" class="btn btn-danger btn-lg w-100 choose-plan-btn package-cta mb-2">Choose plan</a>
+                                <p class="renewal-info text-body-secondary small mb-3">Renews at ₹3000/year for hosting. Cancel anytime.</p>
+                                
+                                <hr class="my-2">
+
+                                <ul class="list-unstyled features-list initial-features text-start mb-2 small">
+                                    <li><span class="icon included">✅</span> Custom Design (With Wordpress CMS)</li>
+                                    <li><span class="icon included">✅</span> Responsive Design</li>
+                                    <li><span class="icon included">✅</span> 1 Year Busienss Hosting</li>
+                                    <li><span class="icon included">✅</span> 1 Year Free Domain (.com/.in)</li>
+                                    <li><span class="icon included">✅</span> Advanced Security Suite</li>
+                                </ul>
+                                <button class="btn btn-outline-secondary btn-sm w-100 mb-2 toggle-features-btn" aria-expanded="false" aria-controls="features-business-all">
+                                    Show All Features <span class="arrow">▼</span>
+                                </button>
+                                <div class="all-features-container" id="features-business-all" style="display: none;">
+                                    <ul class="list-unstyled features-list additional-features text-start small">
+                                        <!-- ** MANUALLY EDIT THIS LIST PER PACKAGE ** -->
+                                        <li><span class="icon included">✅</span> Up to 10+ Core Pages</li>
+                                        <li><span class="icon included">✅</span> Custom Design Concepts</li>
+                                        <li><span class="icon included">✅</span> Responsive Design (Mobile, Tablet, Desktop)</li>
+                                        <li><span class="icon included">✅</span> 1 Year Busienss Hosting</li>
+                                        <li><span class="icon included">✅</span> Free Domain (1st year, .com/.in)</li>
+                                        <li><span class="icon included">✅</span> Ads Integration By Adsterra(+ ₹2000 Extra)</li>
+                                        <li><span class="icon included">✅</span> Free 2 Business Mail</li>
+                                        <li><span class="icon included">✅</span> Earning Module PDF</li>
+                                        <li><span class="icon included">✅</span> Basic Security Suite</li>
+                                        <li><span class="icon included">✅</span> Basic Theme Customization</li>
+                                        <li><span class="icon included">✅</span> Advanced Theme Customization</li>
+                                        <li><span class="icon included">✅</span> Contact Form Integration</li>
+                                        <li><span class="icon included">✅</span> Contact Form with Basic Automation</li>
+                                        <li><span class="icon included">✅</span> Blog Setup & Styling</li>
+                                        <li><span class="icon included">✅</span> Social Media Integration</li>
+                                        <li><span class="icon included">✅</span> Basic SEO Setup</li>
+                                        <li><span class="icon included">✅</span> Advanced SEO Setup</li>
+                                        <li><span class="icon not-included">❌</span> Comprehensive SEO</li>
+                                        <li><span class="icon included">✅</span> Google Analytics Integration</li>
+                                        <li><span class="icon included">✅</span> Google Search Console Setup</li>
+                                        <li><span class="icon included">✅</span> WordPress Security Basics</li>
+                                        <li><span class="icon included">✅</span> Advanced Security Suite</li>
+                                        <li><span class="icon included">✅</span> Advanced Performance Optimization</li>
+                                        <li><span class="icon included">✅</span> Content Upload (up to 20+ pages)</li>
+                                        <li><span class="icon not-included">❌</span> Automated Backup Solution</li>
+                                        <li><span class="icon included">✅</span> SSL Certificate Installation</li>
+                                        <li><span class="icon not-included">❌</span> Product Upload</li>
+                                        <li><span class="icon not-included">❌</span> Payment Gateway Integration</li>
+                                        <li><span class="icon not-included">❌</span> Shipping & Tax Configuration</li>
+                                        <li><span class="icon not-included">❌</span> Inventory Management Setup</li>
+                                        <li><span class="icon not-included">❌</span> Coupon & Discount System Setup</li>
+                                        <li><span class="icon not-included">❌</span> Customer Account Management</li>
+                                        <li><span class="icon not-included">❌</span> Membership / Booking System</li>
+                                        <li><span class="icon not-included">❌</span> WordPress Staging Environment</li>
+                                        <li><span class="icon not-included">❌</span> Dedicated IP Address</li>
+                                        <li><span class="icon not-included">❌</span> 1 Months Support Duration</li>
+                                        <li><span class="icon included">✅</span> 3 Months Support Duration</li>
+                                        <li><span class="icon not-included">❌</span> 6 Months Support Duration</li>
+                                        <li><span class="icon included">✅</span> Basic Email Support Type</li>
+                                        <li><span class="icon included">✅</span> Premium Support Type</li>
+                                        <li><span class="icon not-included">❌</span> Priority Support Queue</li>
+                                        <li><span class="icon not-included">❌</span> Full WooCommerce E-commerce Setup</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- E-COMMERCE POWERHOUSE PACKAGE - HOSTINGER STYLE -->
+                    <div class="col-lg-4 package-card-wrapper">
+                        <div class="card h-100 package-card hostinger-style-card">
+                             <div class="card-header bg-transparent border-0 pt-3 pb-0 text-center" style="min-height: 30px;">
+                                <!-- Optional Tag -->
+                            </div>
+                            <div class="card-body d-flex flex-column text-center pt-2">
+                                <h3 class="package-title mb-1 fs-4">Business Powerhouse</h3>
+                                <p class="package-subtitle text-body-secondary small mb-3">Complete online Business Solution in one plan.</p>
+
+                                <div class="price-section mb-3">
+                                    <div class="original-price-container mb-1">
+                                        <span class="text-decoration-line-through text-body-secondary small">₹74,500</span> <!-- ORIGINAL PRICE -->
+                                        <span class="badge rounded-pill text-bg-primary ms-2 save-badge">SAVE 49%</span> <!-- YOUR DISCOUNT -->
+                                    </div>
+                                    <p class="current-price h1 fw-bold mb-0">
+                                        <span class="currency small align-baseline">₹</span>50,000
+                                    </p>
+                                    <p class="bonus-offer text-primary fw-semibold mb-3 small">+ 2 years business hosting</p> <!-- YOUR BONUS -->
+                                </div>
+
+                                <a href="#call-to-action" class="btn btn-danger btn-lg w-100 choose-plan-btn package-cta mb-2">Choose plan</a>
+                                <p class="renewal-info text-body-secondary small mb-3">Renews at ₹5000/year for hosting. Cancel anytime.</p>
+                                
+                                <hr class="my-2">
+
+                                <ul class="list-unstyled features-list initial-features text-start mb-2 small">
+                                    <li><span class="icon included">✅</span> Custom Design (With Coding)</li>
+                                    <li><span class="icon included">✅</span> Responsive Design</li>
+                                    <li><span class="icon included">✅</span> 2 Year Busienss Hosting</li>
+                                    <li><span class="icon included">✅</span> 1 Year Free Domain (.com/.in)</li>
+                                    <li><span class="icon included">✅</span> Advanced Security Suite</li>
+                                </ul>
+                                <button class="btn btn-outline-secondary btn-sm w-100 mb-2 toggle-features-btn" aria-expanded="false" aria-controls="features-ecommerce-all">
+                                    Show All Features <span class="arrow">▼</span>
+                                </button>
+                                <div class="all-features-container" id="features-ecommerce-all" style="display: none;">
+                                    <ul class="list-unstyled features-list additional-features text-start small">
+                                        <!-- ** MANUALLY EDIT THIS LIST PER PACKAGE ** -->
+                                        <!-- ** MANUALLY EDIT THIS LIST PER PACKAGE ** -->
+                                        <li><span class="icon included">✅</span> Up to 10+ Core Pages</li>
+                                        <li><span class="icon included">✅</span> Custom Design Concepts</li>
+                                        <li><span class="icon included">✅</span> Responsive Design (Mobile, Tablet, Desktop)</li>
+                                        <li><span class="icon included">✅</span> 2 Year Busienss Hosting</li>
+                                        <li><span class="icon included">✅</span> Free Domain (1st year, .com/.in)</li>
+                                        <li><span class="icon included">✅</span> Ads Integration By Adsterra(+ ₹2000 Extra)</li>
+                                        <li><span class="icon included">✅</span> Free 2 Business Mail</li>
+                                        <li><span class="icon included">✅</span> Earning Module PDF</li>
+                                        <li><span class="icon included">✅</span> Basic Security Suite</li>
+                                        <li><span class="icon included">✅</span> Basic Theme Customization</li>
+                                        <li><span class="icon included">✅</span> Advanced Theme Customization</li>
+                                        <li><span class="icon included">✅</span> Contact Form Integration</li>
+                                        <li><span class="icon included">✅</span> Contact Form with Basic Automation</li>
+                                        <li><span class="icon included">✅</span> Blog Setup & Styling</li>
+                                        <li><span class="icon included">✅</span> Social Media Integration</li>
+                                        <li><span class="icon included">✅</span> Basic SEO Setup</li>
+                                        <li><span class="icon included">✅</span> Advanced SEO Setup</li>
+                                        <li><span class="icon not-included">✅</span> Comprehensive SEO</li>
+                                        <li><span class="icon included">✅</span> Google Analytics Integration</li>
+                                        <li><span class="icon included">✅</span> Google Search Console Setup</li>
+                                        <li><span class="icon included">✅</span> WordPress Security Basics</li>
+                                        <li><span class="icon included">✅</span> Advanced Security Suite</li>
+                                        <li><span class="icon included">✅</span> Advanced Performance Optimization</li>
+                                        <li><span class="icon included">✅</span> Content Upload (up to 20+ pages)</li>
+                                        <li><span class="icon not-included">❌</span> Automated Backup Solution</li>
+                                        <li><span class="icon included">✅</span> SSL Certificate Installation</li>
+                                        <li><span class="icon not-included">❌</span> Product Upload</li>
+                                        <li><span class="icon not-included">❌</span> Payment Gateway Integration</li>
+                                        <li><span class="icon not-included">❌</span> Shipping & Tax Configuration</li>
+                                        <li><span class="icon not-included">❌</span> Inventory Management Setup</li>
+                                        <li><span class="icon not-included">❌</span> Coupon & Discount System Setup</li>
+                                        <li><span class="icon not-included">❌</span> Customer Account Management</li>
+                                        <li><span class="icon not-included">❌</span> Membership / Booking System</li>
+                                        <li><span class="icon not-included">❌</span> WordPress Staging Environment</li>
+                                        <li><span class="icon not-included">❌</span> Dedicated IP Address</li>
+                                        <li><span class="icon not-included">❌</span> 1 Months Support Duration</li>
+                                        <li><span class="icon not-included">❌</span> 3 Months Support Duration</li>
+                                        <li><span class="icon included">✅</span> 6 Months Support Duration</li>
+                                        <li><span class="icon included">✅</span> Basic Email Support Type</li>
+                                        <li><span class="icon included">✅</span> Premium Support Type</li>
+                                        <li><span class="icon not-included">❌</span> Priority Support Queue</li>
+                                        <li><span class="icon not-included">❌</span> Full WooCommerce E-commerce Setup</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Carousel Indicators Container -->
+                <div class="carousel-indicators-container mt-3">
+                    <div class="carousel-indicators" id="package-indicators">
+                        <!-- Dots will be generated by JavaScript here -->
+                    </div>
+                </div>
+                <div class="custom-quote-section card mt-4"> <!-- Styled as a card for consistency -->
+                    <div class="card-body text-center">
+                        <h4 class="card-title">Need Something Different or More Specific?</h4>
+                        <p class="card-text">Every project is unique. If our packages don't quite fit, or you have specific requirements, let's talk!</p>
+                        <a href="#call-to-action" class="btn btn-danger">Request a Custom Quote</a>
+                    </div>
+                </div>
+            </section>
+
+            <section id="call-to-action" class="py-5 text-center">
+                <h2>Ready to Elevate Your Brand Online?</h2>
+                <p class="lead col-lg-8 mx-auto">Contact us today to discuss your WordPress project or get started with a package!</p>
+                <div class="mt-4">
+                    <a href="tel:+919625284307" class="btn btn-danger btn-lg mx-1 my-1" aria-label="Call us">Call Us Now</a>
+                    <a href="mailto:dynamictechworldofficial@gmail.com" class="btn btn-danger btn-lg mx-1 my-1" aria-label="Email us">Email Us</a>
+                    <a href="https://wa.me/919625284307?text=Hi%2C%20I%20saw%20your%20WordPress%20website%20quotation%20and%20I%20am%20interested." class="btn btn-success btn-lg mx-1 my-1" target="_blank" aria-label="Chat on WhatsApp">Chat on WhatsApp</a>
+                </div>
+                <div class="social-links mt-4">
+                    <a href="https://www.facebook.com/profile.php?id=61551941882718" target="_blank" aria-label="Facebook"><img src="/asset/fb.svg" alt="Facebook" class="social-icon"></a>
+                    <a href="https://www.instagram.com/dynamictech.world/" target="_blank" aria-label="Facebook"><img src="/asset/instagram-svgrepo-com.svg" alt="Facebook" class="social-icon"></a>
+                    <!-- <a href="#" target="_blank" aria-label="Twitter"><img src="images/icon-twitter.svg" alt="Twitter" class="social-icon"></a> -->
+                    <a href="https://www.linkedin.com/in/entrepreneurabhay/" target="_blank" aria-label="LinkedIn"><img src="/asset/ld.svg" alt="LinkedIn" class="social-icon"></a>
+                </div>
+            </section>
+
+            <div class="bottom-content-wrapper row mt-5">
+                <section id="terms" class="col-lg-8">
+                    <h4 class="section-title-custom">TERMS AND CONDITION</h4>
+                    <ul class="list-unstyled small">
+                        <li><span class="icon included">●</span> A 50% advance payment is required to start the project. The remaining 50% is due upon completion and before final delivery/launch.</li>
+                        <li><span class="icon included">●</span> Package prices are indicative and may vary based on specific project scope and complexity.</li>
+                        <li><span class="icon included">●</span> Content (text, images, videos) to be provided by the client unless otherwise agreed.</li>
+                        <li><span class="icon included">●</span> Hosting and domain registration are included as specified in packages; renewals are client's responsibility unless a maintenance package is active.</li>
+                        <li><span class="icon included">●</span> 18 % GST applied on the sevices , if you want proper billing</li>
+                    </ul>
+                </section>
+
+                <div class="col-lg-4 authorization-section text-center p-3 border rounded">
+                    <div class="signature-area border-bottom pb-2 mb-2">
+                        <span class="signature-text">Abhay</span>
+                    </div>
+                    <p class="auth-title small text-uppercase fw-bold">AUTHORIZED SIGN</p>
+                    <p class="auth-date small">14 July 2025</p> <!-- Update date as needed -->
+                </div>
+            </div>
+        </main>
+
+        <footer class="py-4 mt-5 border-top text-center">
+            <p class="mb-0 small text-body-secondary">© <span id="currentYear"></span> Dynamic Tech World. All Rights Reserved.</p>
+        </footer>
+    </div>
+
+    <!-- Bootstrap JS Bundle (includes Popper) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <!-- Custom JS -->
+    <script src="/script.js"></script>
+</body>
+</html>

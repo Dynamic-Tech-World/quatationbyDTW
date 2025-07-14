@@ -1,0 +1,381 @@
+/* Custom Google Fonts are linked in HTML */
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6, .company-title {
+    /* font-family: 'YourDisplayFont', sans-serif; */
+}
+
+.signature-text {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 2.2em;
+}
+
+/* Custom Main Container Styling */
+.main-container {
+    border-radius: 0.5rem;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+    overflow-x: hidden;
+}
+[data-bs-theme="dark"] .main-container {
+    background-color: #222;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.25);
+}
+[data-bs-theme="light"] .main-container {
+    background-color: #ffffff;
+}
+
+/* Header Customizations */
+.contact-icon {
+    width: 16px;
+    height: 16px;
+    vertical-align: text-bottom;
+    margin-right: 6px;
+}
+[data-bs-theme="dark"] .contact-icon {
+    filter: invert(0.8) brightness(1.2);
+}
+[data-bs-theme="light"] .contact-icon {
+    filter: none;
+}
+
+#theme-toggle .theme-icon {
+    width: 18px;
+    height: 18px;
+    vertical-align: middle;
+}
+
+/* Custom Section Title Style */
+.section-title-custom {
+    background-color: #c0392b;
+    color: #fff;
+    padding: 0.6rem 1.2rem;
+    margin-bottom: 1.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 1.05em;
+    border-radius: 0.25rem;
+    display: inline-block;
+}
+
+#wordpress-services .list-group-item {
+    border-color: var(--bs-border-color-translucent);
+    background-color: transparent !important;
+}
+
+/* --- HOSTINGER-STYLE PACKAGE CARD STYLING --- */
+#wordpress-packages {
+    position: relative; /* For positioning navigation arrows */
+}
+
+.package-card.hostinger-style-card {
+    border: 1px solid var(--bs-border-color-translucent);
+    border-radius: 0.75rem; /* Slightly more rounded like Hostinger */
+    transition: transform 0.2s ease-out, box-shadow 0.2s ease-out;
+    background-color: var(--bs-card-bg); /* Ensure card bg is used */
+}
+.package-card.hostinger-style-card:hover {
+    transform: translateY(-5px) scale(1.02); /* Slight scale on hover */
+    box-shadow: 0 0.75rem 1.5rem rgba(0, 0, 0, 0.15) !important;
+}
+[data-bs-theme="dark"] .package-card.hostinger-style-card:hover {
+    box-shadow: 0 0.75rem 1.5rem rgba(0, 0, 0, 0.3) !important;
+}
+
+.popular-package.hostinger-style-card {
+    border: 2px solid var(--bs-primary) !important;
+    transform-origin: center center; /* For scale transform */
+}
+[data-bs-theme="dark"] .popular-package.hostinger-style-card {
+     border: 2px solid #c0392b !important;
+}
+
+.popular-badge-alt { /* For Hostinger style "MOST POPULAR" */
+    position: absolute;
+    top: -1px; /* Overlap border */
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 0.3rem 1.5rem;
+    font-size: 0.7rem;
+    font-weight: bold;
+    border-bottom-left-radius: 0.375rem;
+    border-bottom-right-radius: 0.375rem;
+    z-index: 5;
+    white-space: nowrap;
+    /* Using Bootstrap badge classes in HTML like `badge bg-primary` */
+}
+[data-bs-theme="dark"] .popular-badge-alt {
+    background-color: #c0392b !important; /* Ensure it overrides default badge bg */
+    color: white !important;
+}
+
+
+.package-card.hostinger-style-card .card-body {
+    padding: 1rem 1.25rem; /* Consistent padding */
+}
+
+.package-title {
+    font-weight: 700;
+    /* color: var(--bs-body-color); */ /* Handled by Bootstrap */
+}
+.package-subtitle {
+    min-height: 2.5em; /* Reserve space for 2 lines of subtitle */
+}
+
+.price-section .original-price-container {
+    height: 1.5em; /* Reserve space */
+}
+.price-section .save-badge {
+    font-size: 0.75em;
+    padding: 0.3em 0.6em;
+    font-weight: 600;
+    vertical-align: middle;
+    /* Bootstrap text-bg-primary used in HTML */
+}
+[data-bs-theme="dark"] .price-section .save-badge {
+    background-color: #c0392b !important; /* Brighter purple for dark theme badge */
+    color: white !important;
+}
+
+
+.price-section .current-price {
+    line-height: 1;
+    color: var(--bs-emphasis-color); /* More prominent price color */
+}
+.price-section .currency {
+    font-size: 0.5em; /* Smaller currency symbol */
+    font-weight: 600;
+    position: relative;
+    top: -0.4em; /* Align with top of numbers */
+    margin-right: 1px;
+}
+.price-section .price-interval {
+    font-size: 0.8em;
+    font-weight: 400;
+}
+
+.bonus-offer {
+    font-size: 0.9em !important; /* Override small class if needed */
+    min-height: 1.5em; /* Reserve space */
+}
+
+.choose-plan-btn {
+    font-weight: 600 !important;
+    padding: 0.6rem 1rem !important; /* Bootstrap .btn-lg is quite large */
+    /* Bootstrap .btn-primary used in HTML */
+}
+[data-bs-theme="dark"] .choose-plan-btn {
+    background-color: #c0392b !important; /* Custom purple for "Choose Plan" in dark mode */
+    border-color: #c0392b !important;
+}
+[data-bs-theme="light"] .choose-plan-btn.btn-primary {
+    /* Use Bootstrap default primary or define your own light theme primary color */
+}
+
+
+.renewal-info {
+    font-size: 0.75em !important; /* Bootstrap .small is 0.875em */
+    min-height: 2.2em; /* Reserve space for two lines */
+}
+
+.package-card.hostinger-style-card hr {
+    margin-top: 0.75rem;
+    margin-bottom: 0.75rem;
+    border-top-width: 1px;
+    border-top-color: var(--bs-border-color-translucent);
+}
+
+/* Feature list styling within Hostinger card */
+.package-card.hostinger-style-card .features-list {
+    font-size: 0.8em; /* Smaller features text for this style */
+    margin-bottom: 0.75rem !important;
+}
+.package-card.hostinger-style-card .features-list li {
+    margin-bottom: 0.4rem;
+    line-height: 1.4;
+}
+.package-card.hostinger-style-card .features-list li:has(> .icon.not-included) {
+    opacity: 0.55; /* More faded */
+}
+.package-card.hostinger-style-card .features-list .icon {
+    margin-right: 0.5rem;
+    width: 14px;
+}
+
+.package-card.hostinger-style-card .toggle-features-btn {
+    font-size: 0.8rem !important; /* Bootstrap .btn-sm is 0.875rem */
+    padding: 0.3rem 0.5rem !important;
+    margin-top: auto; /* Push to bottom if it's the last visible element before expansion */
+}
+.package-card.hostinger-style-card .all-features-container {
+    margin-top: 0.5rem; /* Space after "Show all" button when expanded */
+    margin-bottom: 0;
+}
+
+/* Optional Navigation Arrows for Package Slider */
+.package-nav-arrow {
+    position: absolute;
+    top: 50%; /* Position in the middle of the packages-grid height */
+    transform: translateY(-150%); /* Adjust this to vertically center on the cards, not the whole section */
+    z-index: 20;
+    background-color: var(--bs-body-bg);
+    color: var(--bs-body-color);
+    border: 1px solid var(--bs-border-color);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: none; /* Hidden by default, shown in mobile media query */
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: background-color 0.2s, color 0.2s, box-shadow 0.2s;
+}
+.package-nav-arrow:hover {
+    background-color: var(--bs-secondary-bg);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+.package-nav-arrow.prev-arrow {
+    left: -10px; /* Adjust for proximity to cards */
+}
+.package-nav-arrow.next-arrow {
+    right: -10px; /* Adjust for proximity to cards */
+}
+.package-nav-arrow i {
+    font-size: 0.9rem;
+}
+
+/* Carousel Indicators */
+.carousel-indicators-container {
+    display: none;
+    text-align: center;
+    width: 100%;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    margin-bottom: 1.5rem;
+}
+.carousel-indicators .indicator-dot {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background-color: var(--bs-secondary-bg);
+    border: 1px solid var(--bs-border-color-translucent);
+    border-radius: 50%;
+    margin: 0 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+.carousel-indicators .indicator-dot.active {
+    background-color: var(--bs-primary); /* Use primary for active dot */
+    transform: scale(1.2);
+    border-color: transparent;
+}
+[data-bs-theme="dark"] .carousel-indicators .indicator-dot.active {
+    background-color: #c0392b; /* Custom purple for active dot in dark mode */
+}
+
+
+/* Authorization Section */
+.authorization-section { }
+
+/* Social Icons */
+.social-icon {
+    width: 28px;
+    height: 28px;
+    margin: 0 0.4rem;
+    transition: transform 0.2s ease, filter 0.2s ease;
+}
+[data-bs-theme="dark"] .social-icon { filter: invert(0.75) brightness(1.1); }
+[data-bs-theme="light"] .social-icon { filter: invert(0.15) brightness(0.9); }
+.social-icon:hover { transform: scale(1.15); }
+[data-bs-theme="dark"] .social-icon:hover { filter: invert(1) brightness(1.5); }
+[data-bs-theme="light"] .social-icon:hover { filter: none; }
+
+
+/* --- RESPONSIVE STYLES FOR HORIZONTAL SCROLL --- */
+@media (max-width: 991.98px) { /* Affects tablets and phones */
+    .packages-grid {
+        display: flex !important;
+        flex-wrap: nowrap; /* Ensure no wrapping */
+        overflow-x: auto;
+        overflow-y: hidden;
+        /* "Peek-a-boo" effect: negative margin to pull edges out, padding to bring first item in */
+        /* Assuming .main-container has approx 1rem padding (Bootstrap standard) */
+        margin-left: -1rem;
+        margin-right: -1rem;
+        padding-left: 1rem;
+        padding-right: 1rem; /* Padding at the end of the scroll area */
+        padding-bottom: 15px; /* Space for scrollbar and visual */
+
+        -webkit-overflow-scrolling: touch;
+        scroll-snap-type: x mandatory; /* Snap to cards */
+        scrollbar-width: thin;
+        scrollbar-color: var(--bs-border-color-translucent) transparent;
+    }
+    .packages-grid::-webkit-scrollbar { height: 6px; }
+    .packages-grid::-webkit-scrollbar-track { background: transparent; }
+    .packages-grid::-webkit-scrollbar-thumb {
+        background-color: var(--bs-border-color-translucent);
+        border-radius: 3px;
+    }
+    .packages-grid::-webkit-scrollbar-thumb:hover { background-color: var(--bs-secondary-color); }
+
+    .package-card-wrapper {
+        flex: 0 0 auto;
+        width: 280px; /* Adjust for desired "peek" amount */
+        max-width: 75vw; /* Don't let one card take too much on smaller tablets */
+        margin-right: 1rem; /* Space between cards */
+        /* Bootstrap column classes (col-lg-4) are for desktop.
+           Here, we override their padding. g-0 on .packages-grid removed gutters. */
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+        scroll-snap-align: start; /* Snap this item to the start */
+    }
+    .package-card-wrapper:last-child {
+        margin-right: 0; /* No margin on the very last card in the scroll */
+    }
+
+    .carousel-indicators-container,
+    .package-nav-arrow { /* Show arrows and dots */
+        display: flex; /* For arrows, to center icon */
+    }
+    /* Adjust arrow vertical positioning based on the actual card height in this view */
+    .package-nav-arrow {
+        transform: translateY(-100%); /* Example: adjust this percentage */
+    }
+     .package-nav-arrow.prev-arrow { left: 5px; } /* Closer to edge */
+     .package-nav-arrow.next-arrow { right: 5px; }
+
+}
+
+@media (max-width: 575.98px) { /* Small mobile phones */
+    .package-card-wrapper {
+        width: calc(100vw - 40px); /* One card mostly visible, minus some padding/peek */
+        min-width: 260px;
+        max-width: 90vw;
+        margin-right: 0.75rem;
+    }
+    .packages-grid {
+        margin-left: -0.75rem; /* Match smaller container padding */
+        margin-right: -0.75rem;
+        padding-left: 0.75rem;
+        padding-right: 0.75rem;
+    }
+
+    .package-nav-arrow { /* Make arrows smaller on phone */
+        width: 35px;
+        height: 35px;
+        transform: translateY(-80%); /* Re-adjust vertical position */
+    }
+    .package-nav-arrow i { font-size: 0.8rem; }
+    .package-nav-arrow.prev-arrow { left: 2px; }
+    .package-nav-arrow.next-arrow { right: 2px; }
+
+    .company-info h1.company-title { font-size: 1.5em; }
+    .contact-details span { font-size: 0.8em; }
+    .section-title-custom { font-size: 0.95em; padding: 0.5rem 1rem; }
+    .card-title, .package-title { font-size: 1.15rem !important; } /* Use Bootstrap's fs- classes or important */
+    .package-price { font-size: 1.1rem !important; }
+    .current-price { font-size: 2rem !important; } /* Make price prominent */
+}
